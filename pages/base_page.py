@@ -24,8 +24,10 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
-    def wait_and_click_on_element(self, how, what, timeout=4):
+    def wait_and_click_on_element(self, how, what, timeout=5):
         WebDriverWait(self.browser, timeout).until(EC.element_to_be_clickable((how, what))).click()
+
+
 
     def is_not_element_present(self, how, what, timeout=4):
         try:

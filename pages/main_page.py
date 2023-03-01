@@ -26,4 +26,4 @@ class MainPage(BasePage):
         self.browser.find_element(By.CSS_SELECTOR, self.inputPassword).send_keys(password)
 
     def click_login_button(self):
-        self.browser.find_element(By.CSS_SELECTOR, self.loginButton)
+        self.browser.find_element(By.CSS_SELECTOR, self.loginButton).click()
